@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.foodbook.api</groupId>
+        <artifactId>foodbook-starter</artifactId>
+        <version>1.0.4</version>
+    </parent>
+
+    <artifactId>foodbook-starter-api-client</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.4</version>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/${project.organization.name}/${project.artifactId}/issues</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub emstryszawski Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/${project.organization.name}/${project.artifactId}</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <foodbook.spring.cloud.starter.openfeign.version>4.0.0</foodbook.spring.cloud.starter.openfeign.version>
+        <foodbook.feign.version>13.0</foodbook.feign.version>
+        <foodbook.jackson.databind.version>2.15.3</foodbook.jackson.databind.version>
+        <foodbook.openapitools.version>0.2.6</foodbook.openapitools.version>
+        <foodbook.springdoc.version>2.1.0</foodbook.springdoc.version>
+        <foodbook.jackson.databind.nullable.version>0.2.6</foodbook.jackson.databind.nullable.version>
+    </properties>
+
+    <dependencies>
+        <!--<SPRING-BOOT>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--</SPRING-BOOT>-->
+        <!--<OPEN-API>-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${foodbook.springdoc.version}</version>
+        </dependency>
+        <!--<!OPEN-API>-->
+        <!--<FEIGN>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${foodbook.spring.cloud.starter.openfeign.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>${foodbook.feign.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+            <version>${foodbook.feign.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${foodbook.jackson.databind.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>${foodbook.jackson.databind.nullable.version}</version>
+        </dependency>
+        <!--<FEIGN>-->
+    </dependencies>
+
+</project>
