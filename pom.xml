@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.foodbook.api</groupId>
         <artifactId>foodbook-starter</artifactId>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
         <relativePath/>
     </parent>
 
     <artifactId>foodbook-starter-api-client</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
 
     <issueManagement>
         <system>GitHub</system>
@@ -33,6 +33,7 @@
         <foodbook.openapitools.version>0.2.6</foodbook.openapitools.version>
         <foodbook.springdoc.version>2.1.0</foodbook.springdoc.version>
         <foodbook.jackson.databind.nullable.version>0.2.6</foodbook.jackson.databind.nullable.version>
+        <foodbook.slf4j.version>2.0.4</foodbook.slf4j.version>
     </properties>
 
     <dependencies>
@@ -76,6 +77,13 @@
             <version>${foodbook.jackson.databind.nullable.version}</version>
         </dependency>
         <!--<FEIGN>-->
+        <!--<LOGGING>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${foodbook.slf4j.version}</version>
+        </dependency>
+        <!--</LOGGING>-->
     </dependencies>
 
 </project>
